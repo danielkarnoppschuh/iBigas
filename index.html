@@ -1,185 +1,154 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>iBigas | Links Oficiais</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iBigas | Links Oficiais</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    body {
-      min-height: 100vh;
-      background: linear-gradient(to bottom, #8e2de2, #f27121);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
+      body {
+        font-family: 'Rubik', sans-serif;
+        background: linear-gradient(to bottom, #7b2ff7, #fddb92);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
 
-    .card {
-      background-color: #1c1c1e;
-      color: white;
-      width: 100%;
-      max-width: 750px;
-      border-radius: 24px;
-      padding: 2rem;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    }
+      .container {
+        background-color: #1e1e1e;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+        width: 90%;
+        max-width: 700px;
+        text-align: center;
+      }
 
-    .card-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
+      .logo {
+        width: 120px;
+        margin: 0 auto 10px;
+        display: block;
+      }
 
-    .card-header img {
-      width: 80px;
-      height: 80px;
-      border-radius: 16px;
-    }
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
 
-    .card-header h1 {
-      font-size: 2rem;
-      font-weight: 800;
-    }
+      .section-title {
+        color: #00ffff;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
 
-    .section {
-      margin-top: 2rem;
-    }
+      .link-btn {
+        background-color: #333;
+        border: none;
+        color: #fff;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border-radius: 10px;
+        width: 100%;
+        font-size: 1rem;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background 0.3s ease;
+      }
 
-    .section h2 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #00f0ff;
-      margin-bottom: 0.5rem;
-    }
+      .link-btn i {
+        margin-right: 10px;
+      }
 
-    .link-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
+      .link-btn:hover {
+        background-color: #555;
+      }
 
-    .link-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.75rem 1rem;
-      background-color: #2a2a2e;
-      border-radius: 10px;
-      text-decoration: none;
-      color: white;
-      transition: background 0.3s;
-    }
+      .email {
+        margin-top: 20px;
+        font-size: 0.9rem;
+        color: #ccc;
+      }
 
-    .link-item:hover {
-      background-color: #3a3a3f;
-    }
+      .email strong {
+        color: #ffffff;
+        display: block;
+        margin-top: 5px;
+      }
 
-    .link-label {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-weight: 500;
-    }
-
-    .subscribers {
-      font-size: 0.9rem;
-      color: #ccc;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.875rem;
-      color: #aaa;
-    }
-  </style>
-</head>
-<body>
-  <div class="card">
-    <div class="card-header">
-      <img src="profile.png" alt="Logo iBigas">
+      .subscriber-count {
+        color: #00ff00;
+        margin-left: 10px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="https://raw.githubusercontent.com/danielkarnoppschuh/iBigas/main/assets/logo.png"
+        alt="Logo"
+        class="logo"
+      />
       <h1>iBigas</h1>
-    </div>
 
-    <div class="section">
-      <h2>🎧 Canais de Transmissão</h2>
-      <div class="link-list">
-        <a class="link-item" href="https://youtube.com/@ibigastroxo" target="_blank">
-          <span class="link-label">
-            📹 YouTube
-          </span>
-          <span class="subscribers">45</span>
-        </a>
-        <a class="link-item" href="https://twitch.tv/ibigastroxo" target="_blank">
-          <span class="link-label">
-            🎮 Twitch
-          </span>
-        </a>
-        <a class="link-item" href="#">
-          <span class="link-label">
-            🌊 Kick (em breve)
-          </span>
-        </a>
+      <div class="section-title">🎮 Canais de Transmissão</div>
+      <a href="https://www.youtube.com/channel/UCIbZVJ8sF_e6DVlns5L7NlA" class="link-btn">
+        <i class="fab fa-youtube"></i> YouTube <span class="subscriber-count">45</span>
+      </a>
+      <a href="https://www.twitch.tv/ibigastroxo" class="link-btn">
+        <i class="fab fa-twitch"></i> Twitch
+      </a>
+      <a href="#" class="link-btn">
+        <img src="https://raw.githubusercontent.com/danielkarnoppschuh/iBigas/main/assets/kick-black.png" style="width: 16px; margin-right: 10px" />
+        Kick (em breve)
+      </a>
+
+      <div class="section-title">🌐 Redes Sociais</div>
+      <a href="https://www.instagram.com/ibigastroxo" class="link-btn">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://www.tiktok.com/@ibigastroxo" class="link-btn">
+        <i class="fab fa-tiktok"></i> TikTok
+      </a>
+
+      <div class="section-title">👥 Comunidades</div>
+      <a href="https://discord.com/invite/ibigastroxo" class="link-btn">
+        <i class="fab fa-discord"></i> Discord
+      </a>
+      <a href="https://wa.me/5511999999999" class="link-btn">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+
+      <div class="section-title">📧 Contato</div>
+      <div class="email">
+        <strong>danielkchuh@gmail.com</strong>
       </div>
-    </div>
 
-    <div class="section">
-      <h2>📋 Redes Sociais</h2>
-      <div class="link-list">
-        <a class="link-item" href="https://instagram.com/ibigastroxo" target="_blank">
-          <span class="link-label">
-            📸 Instagram
-          </span>
-        </a>
-        <a class="link-item" href="https://tiktok.com/@ibigastroxo" target="_blank">
-          <span class="link-label">
-            🎶 TikTok
-          </span>
-        </a>
-      </div>
+      <p style="margin-top: 30px; font-size: 0.7rem; color: #777">
+        © 2025 iBigas | Todos os direitos reservados.
+      </p>
     </div>
-
-    <div class="section">
-      <h2>👥 Comunidades</h2>
-      <div class="link-list">
-        <a class="link-item" href="https://discord.gg/ibigastroxo" target="_blank">
-          <span class="link-label">
-            🎤 Discord
-          </span>
-        </a>
-        <a class="link-item" href="https://wa.me/5522999999999" target="_blank">
-          <span class="link-label">
-            📞 WhatsApp
-          </span>
-        </a>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>✉️ Contato</h2>
-      <div class="link-list">
-        <div class="link-item">
-          <span class="link-label">
-            📧 danielkchuh@gmail.com
-          </span>
-        </div>
-      </div>
-    </div>
-
-    <footer>
-      © 2025 iBigas | Todos os direitos reservados.
-    </footer>
-  </div>
-</body>
+  </body>
 </html>
