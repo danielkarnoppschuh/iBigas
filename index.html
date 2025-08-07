@@ -11,14 +11,40 @@
       background: url('background.png') no-repeat center center fixed;
       background-size: cover;
       color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
       text-align: center;
     }
-    header { padding: 40px 20px 10px; background: rgba(0,0,0,0.6); }
-    header img { width: 180px; border-radius: 20px; }
-    h1 { font-size: 3em; margin: 15px 0; letter-spacing: 1px; text-transform: uppercase; }
-    h2 { color: #00ffff; margin-top: 40px; }
+    .container {
+      background-color: rgba(0,0,0,0.7);
+      border-radius: 20px;
+      margin-top: 40px;
+      padding: 30px;
+      max-width: 500px;
+      width: 100%;
+    }
+    header img {
+      width: 180px;
+      border-radius: 20px;
+    }
+    h1 {
+      font-size: 3em;
+      margin: 15px 0;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    h2 {
+      color: #00ffff;
+      margin-top: 30px;
+    }
     a {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       margin: 10px auto;
       padding: 12px;
       width: 280px;
@@ -31,54 +57,70 @@
       transition: 0.3s ease;
     }
     a:hover { background-color: #00ffff; color: black; }
-    .counter { margin-top: 30px; font-size: 1.2em; font-weight: bold; }
+    .counter {
+      margin-top: 20px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    .contact {
+      margin-top: 40px;
+      font-size: 0.95em;
+      color: #ccc;
+    }
+    footer {
+      margin-top: 20px;
+      font-size: 0.85em;
+      color: #888;
+    }
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="logo.png" alt="Logo iBigas">
-    <h1>iBigas</h1>
-  </header>
+  <div class="container">
+    <header>
+      <img src="logo.png" alt="Logo iBigas">
+      <h1>IBIGAS</h1>
+    </header>
 
-  <div class="counter">
-    🎯 Inscritos no YouTube: <span id="yt-count">Carregando...</span><br>
-    🟣 Seguidores na Twitch: <span id="tw-count">Carregando...</span>
+    <div class="counter">
+      <span>📢 Inscritos no YouTube:</span> <span id="yt-count">Carregando...</span><br>
+      <span>🟣 Seguidores na Twitch:</span> <span id="tw-count">requer backend</span>
+    </div>
+
+    <h2>📡 Canais de Transmissão</h2>
+    <a href="https://www.youtube.com/@ibigas" target="_blank"><img class="icon" src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">YouTube</a>
+    <a href="https://www.twitch.tv/ibigasroxo" target="_blank"><img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733641.png">Twitch</a>
+    <a href="#" onclick="alert('Em breve!'); return false;"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Kick.com_Logo_2023.svg">Kick (em breve)</a>
+
+    <h2>🌐 Redes Sociais</h2>
+    <a href="https://www.instagram.com/danielkarnopp" target="_blank"><img class="icon" src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png">Instagram</a>
+    <a href="https://www.tiktok.com/@ibigastk" target="_blank"><img class="icon" src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">TikTok</a>
+
+    <h2>👥 Comunidades</h2>
+    <a href="https://discord.gg/XZNGe6mf4J" target="_blank"><img class="icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png">Discord</a>
+    <a href="https://chat.whatsapp.com/Bdex5Pnfw5d3mkClH0A9ih?mode=ac_t" target="_blank"><img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733585.png">WhatsApp</a>
+
+    <div class="contact">
+      📧 Contato: <a href="mailto:danielkchuh@gmail.com">danielkchuh@gmail.com</a>
+    </div>
+
+    <footer>
+      © 2025 iBigas | Todos os direitos reservados.
+    </footer>
   </div>
 
-  <h2>📡 Canais de Transmissão</h2>
-  <a href="https://www.youtube.com/@ibigas" target="_blank">🎥 YouTube</a>
-  <a href="https://www.twitch.tv/ibigasroxo" target="_blank">🟣 Twitch</a>
-  <a href="#" onclick="alert('Em breve!'); return false;">🟢 Kick (em breve)</a>
-
-  <h2>🌐 Redes Sociais</h2>
-  <a href="https://www.instagram.com/danielkarnopp" target="_blank">📸 Instagram</a>
-  <a href="https://www.tiktok.com/@ibigastk" target="_blank">🎵 TikTok</a>
-
-  <h2>👥 Comunidades</h2>
-  <a href="https://discord.gg/XZNGe6mf4J" target="_blank">💬 Discord</a>
-  <a href="https://chat.whatsapp.com/Bdex5Pnfw5d3mkClH0A9ih?mode=ac_t" target="_blank">📱 WhatsApp</a>
-
-  <footer style="margin-top: 50px; padding: 20px; font-size: 0.9em; color: #ccc;">
-    © 2025 iBigas | Todos os direitos reservados.
-  </footer>
-
   <script>
-    // YouTube API: contador de inscritos
     fetch("https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCIbZVJ8sF_e6DVlns5L7NlA&key=AIzaSyB3qV8MFChDTFSit_-bs5VxfnDb0eFDcTs")
       .then(response => response.json())
       .then(data => {
         const count = data.items[0].statistics.subscriberCount;
         document.getElementById("yt-count").textContent = parseInt(count).toLocaleString();
       })
-      .catch(error => {
-        console.error("Erro ao buscar inscritos:", error);
-        document.getElementById("yt-count").textContent = "Erro";
-      });
-
-    // Twitch seguidores: requer backend
-    document.getElementById("tw-count").textContent = "requer backend (veja console)";
-    console.log("⚠️ Para mostrar seguidores reais da Twitch, use um backend com autenticação segura.");
+      .catch(() => document.getElementById("yt-count").textContent = "Erro");
   </script>
 
 </body>
