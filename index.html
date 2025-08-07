@@ -66,7 +66,7 @@
 
   <script>
     // YouTube API (já está funcionando)
-    fetch("https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UC3z8HdeCTl2V6bnvpoMGwig&key=AIzaSyB3qV8MFChDTFSit_-bs5VxfnDb0eFDcTs")
+    fetch("https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCQOd_jkaFMwxVlmNRmd1s9Q&key=AIzaSyB3qV8MFChDTFSit_-bs5VxfnDb0eFDcTs")
       .then(response => response.json())
       .then(data => {
         const count = data.items[0].statistics.subscriberCount;
