@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,8 +6,7 @@
   <title>iBigas | Links Oficiais</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body {
-      height: 100%;
+    body {
       font-family: 'Arial', sans-serif;
       background: url('background.png') no-repeat center center fixed;
       background-size: cover;
@@ -66,22 +64,21 @@
   </footer>
 
   <script>
+    // YouTube API: contador de inscritos
     fetch("https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCIbZVJ8sF_e6DVlns5L7NlA&key=AIzaSyB3qV8MFChDTFSit_-bs5VxfnDb0eFDcTs")
       .then(response => response.json())
       .then(data => {
-        if (data.items && data.items[0]) {
-          const count = data.items[0].statistics.subscriberCount;
-          document.getElementById("yt-count").textContent = parseInt(count).toLocaleString();
-        } else {
-          document.getElementById("yt-count").textContent = "Canal não encontrado";
-        }
+        const count = data.items[0].statistics.subscriberCount;
+        document.getElementById("yt-count").textContent = parseInt(count).toLocaleString();
       })
       .catch(error => {
         console.error("Erro ao buscar inscritos:", error);
         document.getElementById("yt-count").textContent = "Erro";
       });
 
+    // Twitch seguidores: requer backend
     document.getElementById("tw-count").textContent = "requer backend (veja console)";
+    console.log("⚠️ Para mostrar seguidores reais da Twitch, use um backend com autenticação segura.");
   </script>
 
 </body>
