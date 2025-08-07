@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,7 +6,8 @@
   <title>iBigas | Links Oficiais</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
+    html, body {
+      height: 100%;
       font-family: 'Arial', sans-serif;
       background: url('background.png') no-repeat center center fixed;
       background-size: cover;
@@ -65,21 +65,22 @@
   </footer>
 
   <script>
-    // YouTube API (já está funcionando)
+    // YouTube API com ID correto e sua chave
     fetch("https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCIbZVJ8sF_e6DVlns5L7NlA&key=AIzaSyB3qV8MFChDTFSit_-bs5VxfnDb0eFDcTs")
       .then(response => response.json())
       .then(data => {
         const count = data.items[0].statistics.subscriberCount;
         document.getElementById("yt-count").textContent = parseInt(count).toLocaleString();
       })
-      .catch(() => document.getElementById("yt-count").textContent = "Erro");
+      .catch(error => {
+        console.error("Erro ao buscar inscritos:", error);
+        document.getElementById("yt-count").textContent = "Erro";
+      });
 
-    // Twitch followers: Requer backend por segurança — simulado aqui
+    // Twitch requer backend
     document.getElementById("tw-count").textContent = "requer backend (veja console)";
-    console.log("⚠️ Para mostrar seguidores reais da Twitch, use um backend para autenticação com Client Secret com segurança.");
+    console.log("⚠️ Para mostrar seguidores reais da Twitch, use um backend com client secret com segurança.");
   </script>
 
 </body>
 </html>
-
-
