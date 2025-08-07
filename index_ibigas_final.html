@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iBigas | Links Oficiais</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+      background: url('background.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+    header { padding: 40px 20px 10px; background: rgba(0,0,0,0.6); }
+    header img { width: 180px; border-radius: 20px; }
+    h1 { font-size: 3em; margin: 15px 0; letter-spacing: 1px; text-transform: uppercase; }
+    h2 { color: #00ffff; margin-top: 40px; }
+    a {
+      display: block;
+      margin: 10px auto;
+      padding: 12px;
+      width: 280px;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+    a:hover { background-color: #00ffff; color: black; }
+    .counter { margin-top: 30px; font-size: 1.2em; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Logo iBigas">
+    <h1>iBigas</h1>
+  </header>
+
+  <div class="counter">
+    🎯 Inscritos no YouTube: <span id="yt-count">Carregando...</span><br>
+    🟣 Seguidores na Twitch: <span id="tw-count">Carregando...</span>
+  </div>
+
+  <h2>📡 Canais de Transmissão</h2>
+  <a href="https://www.youtube.com/@ibigas" target="_blank">🎥 YouTube</a>
+  <a href="https://www.twitch.tv/ibigasroxo" target="_blank">🟣 Twitch</a>
+  <a href="#" onclick="alert('Em breve!'); return false;">🟢 Kick (em breve)</a>
+
+  <h2>🌐 Redes Sociais</h2>
+  <a href="https://www.instagram.com/danielkarnopp" target="_blank">📸 Instagram</a>
+  <a href="https://www.tiktok.com/@ibigastk" target="_blank">🎵 TikTok</a>
+
+  <h2>👥 Comunidades</h2>
+  <a href="https://discord.gg/XZNGe6mf4J" target="_blank">💬 Discord</a>
+  <a href="https://chat.whatsapp.com/Bdex5Pnfw5d3mkClH0A9ih?mode=ac_t" target="_blank">📱 WhatsApp</a>
+
+  <footer style="margin-top: 50px; padding: 20px; font-size: 0.9em; color: #ccc;">
+    © 2025 iBigas | Todos os direitos reservados.
+  </footer>
+
+  <script>
+    fetch("https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCIbZVJ8sF_e6DVlns5L7NlA&key=AIzaSyB3qV8MFChDTFSit_-bs5VxfnDb0eFDcTs")
+      .then(response => response.json())
+      .then(data => {
+        if (data.items && data.items[0]) {
+          const count = data.items[0].statistics.subscriberCount;
+          document.getElementById("yt-count").textContent = parseInt(count).toLocaleString();
+        } else {
+          document.getElementById("yt-count").textContent = "Canal não encontrado";
+        }
+      })
+      .catch(error => {
+        console.error("Erro ao buscar inscritos:", error);
+        document.getElementById("yt-count").textContent = "Erro";
+      });
+
+    document.getElementById("tw-count").textContent = "requer backend (veja console)";
+  </script>
+
+</body>
+</html>
