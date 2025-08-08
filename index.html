@@ -156,7 +156,7 @@
         align-items: center;
         gap: 20px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-        max-width: 420px;
+        max-width: 500px;
       }
 
       .support-box iframe {
@@ -164,9 +164,23 @@
       }
 
       .support-text {
-        font-weight: bold;
-        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
         color: #fff;
+      }
+
+      .main-message {
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+
+      .sub-message {
+        font-size: 0.95rem;
+        color: #ccc;
+        font-style: italic;
+        line-height: 1.4;
+        max-width: 220px;
       }
 
       footer {
@@ -234,15 +248,18 @@
     </div>
 
     <!-- Caixa de suporte com iframe LivePix -->
-<div class="support-box">
-  <iframe 
-    src="https://widget.livepix.gg/embed/ac3d7f12-9f73-477c-9aee-14df5667d6d9" 
-    width="240" 
-    height="320" 
-    style="border-radius: 10px; border: none;"
-    allowfullscreen>
-  </iframe>
-  <div class="support-text">Ajuda é sempre bem-vinda</div>
-</div>
+    <div class="support-box">
+      <iframe 
+        src="https://widget.livepix.gg/embed/ac3d7f12-9f73-477c-9aee-14df5667d6d9" 
+        width="240" 
+        height="320" 
+        style="border-radius: 10px; border: none;"
+        allowfullscreen>
+      </iframe>
+      <div class="support-text">
+        <div class="main-message">Ajuda é sempre bem-vinda</div>
+        <div class="sub-message">Quando você ajuda alguém, Deus ajuda você. Seja luz na vida de alguém</div>
+      </div>
+    </div>
   </body>
 </html>
