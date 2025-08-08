@@ -80,15 +80,14 @@
       line-height: 1.6;
       text-align: left;
       width: 100%;
+    }
+
+    .description strong {
       font-weight: normal;
     }
 
-    .description strong,
     .description small {
       font-weight: normal;
-    }
-
-    .description small {
       font-style: italic;
       color: #aaa;
       display: block;
@@ -153,69 +152,61 @@
       padding: 30px;
       border-radius: 20px;
       display: flex;
-      align-items: center;
-      gap: 30px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-      max-width: 900px;
-      width: 100%;
+      align-items: flex-start;
       justify-content: center;
-    }
-
-    .support-box iframe {
-      border-radius: 10px;
+      gap: 40px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      width: 100%;
+      max-width: 900px;
     }
 
     .support-text {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 10px;
-      color: #fff;
+      max-width: 500px;
     }
 
-    .support-text .main-message {
-      font-size: 1.3rem;
+    .main-message {
       font-weight: bold;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      margin-bottom: 6px;
     }
 
-    .support-text .sub-message {
-      font-style: italic;
+    .sub-message {
       font-size: 0.95rem;
+      font-style: italic;
       color: #ccc;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .thanks-message {
-      color: #00ff88;
+      font-size: 1rem;
+      color: #00ff00;
       font-weight: bold;
-    }
-
-    .pix-key {
-      font-family: monospace;
-      color: #fff;
+      margin-bottom: 10px;
     }
 
     .goal-text {
-      margin-top: 15px;
-      font-size: 0.95rem;
-      font-weight: normal;
-      color: #aaa;
+      font-size: 0.9rem;
+      margin-top: 20px;
+      margin-bottom: 4px;
+      color: #ccc;
     }
 
     .progress-bar {
-      margin-top: 5px;
+      width: 100%;
       height: 8px;
-      background-color: #444;
+      background-color: #333;
       border-radius: 4px;
       overflow: hidden;
-      width: 100%;
-      max-width: 300px;
     }
 
     .progress-bar .fill {
       height: 100%;
       background-color: #00ff00;
-      width: 35%; /* Ajuste aqui o progresso da meta */
+      width: 35%; /* ajustável */
     }
 
     footer {
@@ -224,6 +215,10 @@
       font-size: 0.75rem;
       color: #aaa;
       width: 100%;
+    }
+
+    iframe {
+      border-radius: 12px;
     }
   </style>
 </head>
@@ -291,15 +286,10 @@
     </iframe>
     <div class="support-text">
       <div class="main-message">AJUDA É SEMPRE BEM-VINDA</div>
-      <div class="sub-message">Quando você ajuda alguém, Deus ajuda você. Seja luz na vida de alguém.</div>
-
+      <div class="sub-message">
+        Quando você ajuda alguém, Deus ajuda você. Seja luz na vida de alguém.
+      </div>
       <p class="thanks-message">Obrigado pelo seu apoio!</p>
-      <p class="pix-key">Envie via Pix:<br><code>gamerdarkks@gmail.com</code></p>
-
-      <button onclick="navigator.clipboard.writeText(window.location.href)">
-        📎 Copiar link da página
-      </button>
-
       <p class="goal-text">Meta para tirar o bigode: R$200</p>
       <div class="progress-bar"><div class="fill" style="width: 35%;"></div></div>
     </div>
