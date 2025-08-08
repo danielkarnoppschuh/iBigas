@@ -4,14 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>iBigas | Links Oficiais</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
       * {
         margin: 0;
@@ -32,116 +26,146 @@
       }
 
       .container {
-        background-color: rgba(0, 0, 0, 0.85);
-        padding: 50px 40px;
-        border-radius: 30px;
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.88);
+        padding: 50px;
+        border-radius: 25px;
         width: 100%;
-        max-width: 800px;
-        text-align: center;
+        max-width: 900px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 30px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
       }
 
-      .logo {
-        width: 160px;
-        margin-bottom: 20px;
-        display: block;
+      .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+      }
+
+      .profile img {
+        width: 180px;
         border-radius: 16px;
+        margin-bottom: 20px;
       }
 
-      h1 {
-        font-size: 3rem;
-        margin-bottom: 30px;
+      .profile h1 {
+        font-size: 2.8rem;
         font-weight: bold;
+      }
+
+      .links {
+        flex: 2;
       }
 
       .section-title {
         color: #00ffff;
-        margin-top: 40px;
-        margin-bottom: 15px;
+        margin-top: 30px;
+        margin-bottom: 10px;
         font-weight: bold;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
       }
 
       .link-btn {
         background-color: #222;
         border: none;
         color: #fff;
-        padding: 14px 20px;
+        padding: 12px 20px;
         margin: 10px 0;
-        border-radius: 12px;
+        border-radius: 10px;
         width: 100%;
-        font-size: 1.05rem;
+        font-size: 1rem;
         text-decoration: none;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         transition: background 0.3s ease;
       }
 
-      .link-btn i,
-      .link-btn img {
-        margin-right: 10px;
-        width: 18px;
-        height: auto;
+      .left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .left i,
+      .left img {
+        width: 20px;
+        height: 20px;
+      }
+
+      .subscriber-count {
+        color: #00ff00;
+        font-weight: bold;
       }
 
       .link-btn:hover {
         background-color: #444;
       }
 
-      .subscriber-count {
-        color: #00ff00;
-        margin-left: 10px;
-        font-weight: bold;
-      }
-
       footer {
+        text-align: center;
         margin-top: 40px;
         font-size: 0.75rem;
-        color: #999;
+        color: #aaa;
+        width: 100%;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <img
-        src="logo_efeito.png"
-        alt="Logo iBigas"
-        class="logo"
-      />
-      <h1>iBigas</h1>
+      <div class="profile">
+        <img src="logo_efeito.png" alt="Logo iBigas" />
+        <h1>iBigas</h1>
+      </div>
 
-      <div class="section-title">🎮 Canais de Transmissão</div>
-      <a href="https://www.youtube.com/channel/UCIbZVJ8sF_e6DVlns5L7NlA" class="link-btn">
-        <i class="fab fa-youtube"></i> YouTube <span class="subscriber-count">45</span>
-      </a>
-      <a href="https://www.twitch.tv/ibigastroxo" class="link-btn">
-        <i class="fab fa-twitch"></i> Twitch
-      </a>
-      <a href="#" class="link-btn">
-        <img src="https://raw.githubusercontent.com/danielkarnoppschuh/iBigas/main/assets/kick-black.png" />
-        Kick (em breve)
-      </a>
+      <div class="links">
+        <div class="section-title"><i class="fas fa-gamepad"></i> Canais de Transmissão</div>
+        <a href="https://www.youtube.com/channel/UCIbZVJ8sF_e6DVlns5L7NlA" class="link-btn">
+          <span class="left"><i class="fab fa-youtube"></i> YouTube</span>
+          <span class="subscriber-count">45</span>
+        </a>
+        <a href="https://www.twitch.tv/ibigastroxo" class="link-btn">
+          <span class="left"><i class="fab fa-twitch"></i> Twitch</span>
+          <span></span>
+        </a>
+        <a href="https://kick.com" class="link-btn">
+          <span class="left">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Kick.com_Logo.svg" alt="Kick Logo" />
+            Kick (em breve)
+          </span>
+          <span></span>
+        </a>
 
-      <div class="section-title">🌐 Redes Sociais</div>
-      <a href="https://www.instagram.com/ibigastroxo" class="link-btn">
-        <i class="fab fa-instagram"></i> Instagram
-      </a>
-      <a href="https://www.tiktok.com/@ibigastroxo" class="link-btn">
-        <i class="fab fa-tiktok"></i> TikTok
-      </a>
+        <div class="section-title"><i class="fas fa-globe"></i> Redes Sociais</div>
+        <a href="https://www.instagram.com/ibigastroxo" class="link-btn">
+          <span class="left"><i class="fab fa-instagram"></i> Instagram</span>
+          <span></span>
+        </a>
+        <a href="https://www.tiktok.com/@ibigastroxo" class="link-btn">
+          <span class="left"><i class="fab fa-tiktok"></i> TikTok</span>
+          <span></span>
+        </a>
 
-      <div class="section-title">👥 Comunidades</div>
-      <a href="https://discord.com/invite/ibigastroxo" class="link-btn">
-        <i class="fab fa-discord"></i> Discord
-      </a>
-      <a href="https://wa.me/5511999999999" class="link-btn">
-        <i class="fab fa-whatsapp"></i> WhatsApp
-      </a>
+        <div class="section-title"><i class="fas fa-users"></i> Comunidades</div>
+        <a href="https://discord.com/invite/ibigastroxo" class="link-btn">
+          <span class="left"><i class="fab fa-discord"></i> Discord</span>
+          <span></span>
+        </a>
+        <a href="https://wa.me/5511999999999" class="link-btn">
+          <span class="left"><i class="fab fa-whatsapp"></i> WhatsApp</span>
+          <span></span>
+        </a>
 
-      <footer>
-        © 2025 iBigas | Todos os direitos reservados.
-      </footer>
+        <footer>
+          © 2025 iBigas | Todos os direitos reservados.
+        </footer>
+      </div>
     </div>
   </body>
 </html>
