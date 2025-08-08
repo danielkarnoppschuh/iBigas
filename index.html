@@ -21,55 +21,56 @@
 
       body {
         font-family: 'Rubik', sans-serif;
-        background: linear-gradient(to bottom, #7b2ff7, #fddb92);
+        background: url("background.png") no-repeat center center fixed;
+        background-size: cover;
         color: #fff;
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
+        align-items: center;
         min-height: 100vh;
-        padding: 20px;
+        padding: 40px 20px;
       }
 
       .container {
-        background-color: #1e1e1e;
-        padding: 30px;
-        border-radius: 20px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-        width: 90%;
-        max-width: 700px;
+        background-color: rgba(0, 0, 0, 0.85);
+        padding: 50px 40px;
+        border-radius: 30px;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+        width: 100%;
+        max-width: 800px;
         text-align: center;
       }
 
       .logo {
-        width: 120px;
-        margin: 0 auto 10px;
+        width: 160px;
+        margin-bottom: 20px;
         display: block;
+        border-radius: 16px;
       }
 
       h1 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
+        font-size: 3rem;
+        margin-bottom: 30px;
         font-weight: bold;
       }
 
       .section-title {
         color: #00ffff;
-        margin-top: 30px;
+        margin-top: 40px;
         margin-bottom: 15px;
         font-weight: bold;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
 
       .link-btn {
-        background-color: #333;
+        background-color: #222;
         border: none;
         color: #fff;
-        padding: 12px 20px;
-        margin: 8px 0;
-        border-radius: 10px;
+        padding: 14px 20px;
+        margin: 10px 0;
+        border-radius: 12px;
         width: 100%;
-        font-size: 1rem;
+        font-size: 1.05rem;
         text-decoration: none;
         display: flex;
         justify-content: center;
@@ -77,24 +78,15 @@
         transition: background 0.3s ease;
       }
 
-      .link-btn i {
+      .link-btn i,
+      .link-btn img {
         margin-right: 10px;
+        width: 18px;
+        height: auto;
       }
 
       .link-btn:hover {
-        background-color: #555;
-      }
-
-      .email {
-        margin-top: 20px;
-        font-size: 0.9rem;
-        color: #ccc;
-      }
-
-      .email strong {
-        color: #ffffff;
-        display: block;
-        margin-top: 5px;
+        background-color: #444;
       }
 
       .subscriber-count {
@@ -102,13 +94,19 @@
         margin-left: 10px;
         font-weight: bold;
       }
+
+      footer {
+        margin-top: 40px;
+        font-size: 0.75rem;
+        color: #999;
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <img
-        src="https://raw.githubusercontent.com/danielkarnoppschuh/iBigas/main/assets/logo.png"
-        alt="Logo"
+        src="logo_efeito.png"
+        alt="Logo iBigas"
         class="logo"
       />
       <h1>iBigas</h1>
@@ -121,7 +119,7 @@
         <i class="fab fa-twitch"></i> Twitch
       </a>
       <a href="#" class="link-btn">
-        <img src="https://raw.githubusercontent.com/danielkarnoppschuh/iBigas/main/assets/kick-black.png" style="width: 16px; margin-right: 10px" />
+        <img src="https://raw.githubusercontent.com/danielkarnoppschuh/iBigas/main/assets/kick-black.png" />
         Kick (em breve)
       </a>
 
@@ -141,14 +139,9 @@
         <i class="fab fa-whatsapp"></i> WhatsApp
       </a>
 
-      <div class="section-title">📧 Contato</div>
-      <div class="email">
-        <strong>danielkchuh@gmail.com</strong>
-      </div>
-
-      <p style="margin-top: 30px; font-size: 0.7rem; color: #777">
+      <footer>
         © 2025 iBigas | Todos os direitos reservados.
-      </p>
+      </footer>
     </div>
   </body>
 </html>
