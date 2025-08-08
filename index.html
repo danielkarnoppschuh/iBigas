@@ -21,7 +21,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        min-height: 100vh;
         padding: 40px 20px;
       }
 
@@ -81,6 +80,10 @@
         line-height: 1.6;
         text-align: left;
         width: 100%;
+        font-weight: normal;
+      }
+
+      .description strong {
         font-weight: normal;
       }
 
@@ -144,14 +147,6 @@
         background-color: #444;
       }
 
-      footer {
-        text-align: center;
-        margin-top: 40px;
-        font-size: 0.75rem;
-        color: #aaa;
-        width: 100%;
-      }
-
       .support-box {
         margin-top: 30px;
         background-color: rgba(0, 0, 0, 0.88);
@@ -161,20 +156,24 @@
         align-items: center;
         gap: 20px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-        max-width: 500px;
-        width: 100%;
       }
 
-      .support-box img {
-        width: 100px;
-        height: 100px;
-        border-radius: 12px;
+      .support-box iframe {
+        border-radius: 10px;
       }
 
       .support-text {
-        font-size: 1.2rem;
         font-weight: bold;
-        color: #ffffff;
+        font-size: 1rem;
+        color: #fff;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 0.75rem;
+        color: #aaa;
+        width: 100%;
       }
     </style>
   </head>
@@ -233,15 +232,17 @@
       </div>
     </div>
 
+    <!-- QR CODE com caixa separada -->
     <div class="support-box">
-  <iframe
-    src="https://widget.livepix.gg/embed/ac3d7f12-9f73-477c-9aee-14df5667d6d9"
-    width="100"
-    height="100"
-    style="border: none; border-radius: 12px;"
-    allow="clipboard-write"
-  ></iframe>
-  <div class="support-text">Ajuda é sempre bem-vinda</div>
-</div>
+      <iframe
+        src="https://widget.livepix.gg/embed/ac3d7f12-9f73-477c-9aee-14df5667d6d9"
+        width="180"
+        height="180"
+        style="border: none; border-radius: 12px;"
+        allow="clipboard-write"
+        loading="lazy"
+      ></iframe>
+      <div class="support-text">Ajuda é sempre bem-vinda</div>
+    </div>
   </body>
 </html>
