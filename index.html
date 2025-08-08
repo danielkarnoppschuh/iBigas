@@ -1,48 +1,154 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>iBigas | Links Oficiais</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="logo_efeito.png" />
-  <script src="https://kit.fontawesome.com/8df576c134.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <div class="container">
-    <div class="profile">
-      <img src="logo_efeito.png" alt="Logo iBigas" class="logo" />
-      <h1 class="name">iBigas</h1>
-    </div>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iBigas | Links Oficiais</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    <div class="section">
-      <h2>Canais de Transmissão</h2>
-      <a href="https://www.youtube.com/@ibigastroxo" target="_blank">
-        <i class="fab fa-youtube"></i> YouTube <span class="count">45</span>
+      body {
+        font-family: 'Rubik', sans-serif;
+        background: linear-gradient(to bottom, #7b2ff7, #fddb92);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        background-color: #1e1e1e;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+        width: 90%;
+        max-width: 700px;
+        text-align: center;
+      }
+
+      .logo {
+        width: 120px;
+        margin: 0 auto 10px;
+        display: block;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .section-title {
+        color: #00ffff;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      .link-btn {
+        background-color: #333;
+        border: none;
+        color: #fff;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border-radius: 10px;
+        width: 100%;
+        font-size: 1rem;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background 0.3s ease;
+      }
+
+      .link-btn i {
+        margin-right: 10px;
+      }
+
+      .link-btn:hover {
+        background-color: #555;
+      }
+
+      .email {
+        margin-top: 20px;
+        font-size: 0.9rem;
+        color: #ccc;
+      }
+
+      .email strong {
+        color: #ffffff;
+        display: block;
+        margin-top: 5px;
+      }
+
+      .subscriber-count {
+        color: #00ff00;
+        margin-left: 10px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="https://raw.githubusercontent.com/danielkarnoppschuh/iBigas/main/assets/logo.png"
+        alt="Logo"
+        class="logo"
+      />
+      <h1>iBigas</h1>
+
+      <div class="section-title">🎮 Canais de Transmissão</div>
+      <a href="https://www.youtube.com/channel/UCIbZVJ8sF_e6DVlns5L7NlA" class="link-btn">
+        <i class="fab fa-youtube"></i> YouTube <span class="subscriber-count">45</span>
       </a>
-      <a href="https://www.twitch.tv/ibigastroxo" target="_blank">
+      <a href="https://www.twitch.tv/ibigastroxo" class="link-btn">
         <i class="fab fa-twitch"></i> Twitch
       </a>
-      <a href="#">
-        <img src="kick-icon.png" class="icon"> Kick (em breve)
+      <a href="#" class="link-btn">
+        <img src="https://raw.githubusercontent.com/danielkarnoppschuh/iBigas/main/assets/kick-black.png" style="width: 16px; margin-right: 10px" />
+        Kick (em breve)
       </a>
-    </div>
 
-    <div class="section">
-      <h2>Redes Sociais</h2>
-      <a href="https://www.instagram.com/ibigastroxo" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-      <a href="https://www.tiktok.com/@ibigastroxo" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
-    </div>
+      <div class="section-title">🌐 Redes Sociais</div>
+      <a href="https://www.instagram.com/ibigastroxo" class="link-btn">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://www.tiktok.com/@ibigastroxo" class="link-btn">
+        <i class="fab fa-tiktok"></i> TikTok
+      </a>
 
-    <div class="section">
-      <h2>Grupos e Comunidade</h2>
-      <a href="https://discord.gg/XZNGe6mf4J" target="_blank"><i class="fab fa-discord"></i> Discord</a>
-      <a href="https://chat.whatsapp.com/Bdex5Pnfw5d3mkClH0A9ih?mode=ac_t" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-    </div>
+      <div class="section-title">👥 Comunidades</div>
+      <a href="https://discord.com/invite/ibigastroxo" class="link-btn">
+        <i class="fab fa-discord"></i> Discord
+      </a>
+      <a href="https://wa.me/5511999999999" class="link-btn">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
 
-    <footer>
-      <p>© 2025 iBigas | Todos os direitos reservados.</p>
-    </footer>
-  </div>
-</body>
+      <div class="section-title">📧 Contato</div>
+      <div class="email">
+        <strong>danielkchuh@gmail.com</strong>
+      </div>
+
+      <p style="margin-top: 30px; font-size: 0.7rem; color: #777">
+        © 2025 iBigas | Todos os direitos reservados.
+      </p>
+    </div>
+  </body>
 </html>
